@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-12">
+        <h2>Here are the deals for this shop</h2>
+        {{#if name}}
+        You can get {{qty}} of avocados for {{price}} only!
+        {{/if}}
+    </div>
+
+    <br>
+    <br>
+
+    <div class="col-12">
+        <div class="row">
+            <h2>Create a deal</h2>
+            <div class="col-12">
+                <form action="/createDeal" method="POST">
+                    <span name="shopName">Select a shop</span>
+                    <select name="shopName" id="shopName">
+                        <option value="">Please select a Shop</option>
+                        {{#each shopList}}
+                        <option value="{{name}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                    <span name="Price">Select a Price</span>
+                    <select name="price" id="price">
+                        <option value="">Please Select a Price</option>
+                        <option value="30.67">30.67</option>
+                        <option value="50.45">78.9</option>
+                        <option value="98.76">98.76</option>
+                    </select>
+                    <span name="Qty">Select the Quantity</span>
+                    <select name="qty" id="Qty">
+                        <option value="">Select Quantity</option>
+                        <option value="10">10</option>
+                        <option value="40">30</option>
+                        <option value="60">60</option>
+                    </select> <br><br>
+
+                    <input type="submit" name="" value="Create Shop">
+                </form>
+            </div>
+        </div>
+    </div>
+    <form action="/back" method="POST">
+        <button type="submit">Back</button>
+    </form>
+    <br>
+    <form action="/listShops" method="POST">
+        <button type="submit">List Of Shops</button>
+    </form>
+</div>

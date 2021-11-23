@@ -1,1 +1,18 @@
 <h2>Best deals</h2>
+
+<div class="row">
+<h2>Top 5 deals and their shops</h2>
+    {{#each bestDeals}}
+    <form action="/dealsForShop" method="GET">
+        <ul>
+            <li>{{shop_name}}</li>
+            <li>{{qty}}</li>
+            <li>{{price}}</li>
+        </ul>
+        <img src="../images/avocado.jpeg" alt="Avocado">
+        <button type="submit">Select shop</button>
+    </form>
+    {{/each}}
+
+</div>
+

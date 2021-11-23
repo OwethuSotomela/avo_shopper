@@ -5,6 +5,7 @@ module.exports = function(pool) {
 		if (result.rowCount === 1) {
 			return result.rows[0].id;
 		}
+		console.log(null)
 		return null;
 	}
 

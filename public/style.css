@@ -8,3 +8,20 @@ body {
 	margin: auto;
 	width: 80%;
 }
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2%;
+}
+  a:visited {
+    color: green;
+    text-decoration: none;
+  }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
